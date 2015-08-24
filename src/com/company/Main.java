@@ -15,6 +15,7 @@ public class Main {
         double p[] = new double[50];
         String s[] = new String[150];
         String st[] =new String[50];
+        int tax[] = new int[50];
         int num=0;
 
         BufferedReader br = null;
@@ -42,5 +43,14 @@ public class Main {
             System.out.println(st[i]);
             System.out.println(p[i]);
         }
+        for(int i=0;i<num;i++)
+        {
+            tax[i]=0;
+            if(st[i].contains("import"))
+                tax[i]+=5;
+            if(!(st[i].contains("book")||st[i].contains("food")||st[i].contains("chocolate")||st[i].contains("pills")))
+                tax[i]+=5;
+        }
+
     }
 }
