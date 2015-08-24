@@ -48,8 +48,9 @@ public class Main {
             if(!(st[i].contains("book")||st[i].contains("food")||st[i].contains("chocolate")||st[i].contains("pills")||st[i].contains("tablet")))
                 tax[i]+=0.1;
             t[i] = p[i]*tax[i];
-            t[i] = Math.round(t[i] * 20) / 20.0;
+            //t[i] = Math.round(t[i] * 20) / 20.0;
             p[i] += t[i];
+            //p[i] = Math.round(p[i] * 100) / 100.0;
             totalt += t[i];
             total += p[i];
         }
@@ -59,8 +60,9 @@ public class Main {
             System.out.println(p[i]+ " ");
 //            System.out.print(t[i]);
         }
-        System.out.println(totalt);
-        System.out.println(total);
+        totalt = Math.round(totalt * 20) / 20.0;
+        System.out.println("Sales Tax: "+totalt);
+        System.out.println("Total: "+total);
 
     }
 }
