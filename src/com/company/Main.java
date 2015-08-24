@@ -14,7 +14,7 @@ public class Main {
         for(int i=0;sc.next()!=null;i++)
         {
             n[i]= sc.nextInt();
-            s[i]= sc.next();
+            s[i]= sc.nextLine();
             p[i]=sc.nextDouble();
             num=i;
         }
