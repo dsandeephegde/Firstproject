@@ -8,7 +8,7 @@ public class Main {
 	// write your code here
         Scanner sc = new Scanner(System.in);
         int n[] = new int[50];
-        double p[] = new double[]
+        double p[] = new double[50];
         for(;sc.next()!=null;)
         {
 
