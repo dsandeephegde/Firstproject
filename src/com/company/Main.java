@@ -17,6 +17,8 @@ public class Main {
         String st[] =new String[50];
         double tax[] = new double[50];
         double t[] =new double[50];
+        double totalt = 0;
+        double total = 0;
         int num=0;
 
         BufferedReader br = null;
@@ -47,6 +49,8 @@ public class Main {
                 tax[i]+=0.1;
             t[i] = p[i]*tax[i];
             p[i] += t[i];
+            totalt += t[i];
+            total += p[i];
         }
         for(int i=0;i<num;i++)
         {
@@ -55,6 +59,8 @@ public class Main {
             System.out.println(p[i]);
             System.out.println(t[i]);
         }
+        System.out.println(totalt);
+        System.out.println(total);
 
     }
 }
