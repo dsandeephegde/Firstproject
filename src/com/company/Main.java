@@ -43,7 +43,7 @@ public class Main {
         for(int i=0;i<num;i++)
         {
             tax[i]=0;
-            if(st[i].contains("import"))
+            if(st[i].contains("imported"))
                 tax[i]+=0.05;
             if(!(st[i].contains("book")||st[i].contains("food")||st[i].contains("chocolate")||st[i].contains("pills")||st[i].contains("tablet")))
                 tax[i]+=0.1;
@@ -56,7 +56,7 @@ public class Main {
         for(int i=0;i<num;i++) {
             System.out.print(n[i] + " ");
             System.out.print(st[i] + " ");
-            System.out.println(p[i]+" ");
+            System.out.println(p[i]+ " ");
 //            System.out.print(t[i]);
         }
         System.out.println(totalt);
