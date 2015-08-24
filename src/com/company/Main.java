@@ -15,7 +15,8 @@ public class Main {
         double p[] = new double[50];
         String s[] = new String[150];
         String st[] =new String[50];
-        int tax[] = new int[50];
+        double tax[] = new double[50];
+        double t[] =new double[50];
         int num=0;
 
         BufferedReader br = null;
@@ -39,17 +40,20 @@ public class Main {
         }
         for(int i=0;i<num;i++)
         {
-            System.out.println(n[i]);
-            System.out.println(st[i]);
-            System.out.println(p[i]);
+            tax[i]=0;
+            if(st[i].contains("import"))
+                tax[i]+=0.05;
+            if(!(st[i].contains("book")||st[i].contains("food")||st[i].contains("chocolate")||st[i].contains("pills")||st[i].contains("tablet")))
+                tax[i]+=0.1;
+            t[i] = p[i]*tax[i];
+            p[i] += t[i];
         }
         for(int i=0;i<num;i++)
         {
-            tax[i]=0;
-            if(st[i].contains("import"))
-                tax[i]+=5;
-            if(!(st[i].contains("book")||st[i].contains("food")||st[i].contains("chocolate")||st[i].contains("pills")))
-                tax[i]+=5;
+            System.out.println(n[i]);
+            System.out.println(st[i]);
+            System.out.println(p[i]);
+            System.out.println(t[i]);
         }
 
     }
