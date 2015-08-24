@@ -13,36 +13,34 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n[] = new int[50];
         double p[] = new double[50];
-        String s[] = new String[50];
+        String s[] = new String[150];
+        String st[] =new String[50];
         int num=0;
 
         BufferedReader br = null;
 
         try {
-            br = new BufferedReader(new FileReader("input.txt"));
-            int i=0;
+            br = new BufferedReader(new FileReader("/Users/sandeeph/IdeaProjects/Firstproject/src/com/company/input.txt"));
+            int i=0,j=0,k=0,l=0;
             while ((s[i] = br.readLine()) != null) {
-                System.out.println(s[i]);
+                if(i%3==0)n[j++] = Integer.valueOf(s[i]);
+                if(i%3==1)st[k++] = s[i];
+                if(i%3==2)p[l++] = Double.valueOf(s[i]);
+                //System.out.println(s[i]);
+                i++;
             }
+            num=i;
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        for(int i=0;sc.next()!=null;i++)
-        {
-            n[i]= sc.nextInt();
-            s[i]= sc.nextLine();
-            p[i]=sc.nextDouble();
-            num=i;
-        }
-
         for(int i=0;i<num;i++)
         {
-            System.out.print(n[i]);
-            System.out.print(s[i]);
-            System.out.print(p[i]);
+            System.out.println(n[i]);
+            System.out.println(s[i]);
+            System.out.println(p[i]);
         }
     }
 }
