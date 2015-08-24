@@ -48,6 +48,7 @@ public class Main {
             if(!(st[i].contains("book")||st[i].contains("food")||st[i].contains("chocolate")||st[i].contains("pills")||st[i].contains("tablet")))
                 tax[i]+=0.1;
             t[i] = p[i]*tax[i];
+
             p[i] += t[i];
             totalt += t[i];
             total += p[i];
