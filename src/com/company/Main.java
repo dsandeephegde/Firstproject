@@ -1,5 +1,9 @@
 package com.company;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -11,6 +15,21 @@ public class Main {
         double p[] = new double[50];
         String s[] = new String[50];
         int num=0;
+
+        BufferedReader br = null;
+
+        try {
+            br = new BufferedReader(new FileReader("input.txt"));
+            int i=0;
+            while ((s[i] = br.readLine()) != null) {
+                System.out.println(s[i]);
+            }
+
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         for(int i=0;sc.next()!=null;i++)
         {
             n[i]= sc.nextInt();
