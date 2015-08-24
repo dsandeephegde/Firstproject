@@ -29,7 +29,7 @@ public class Main {
                 //System.out.println(s[i]);
                 i++;
             }
-            num=i;
+            num=i/3;
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -39,7 +39,7 @@ public class Main {
         for(int i=0;i<num;i++)
         {
             System.out.println(n[i]);
-            System.out.println(s[i]);
+            System.out.println(st[i]);
             System.out.println(p[i]);
         }
     }
